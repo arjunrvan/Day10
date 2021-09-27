@@ -1,4 +1,5 @@
 var container1 = document.getElementById('container1');
+var container2 = document.getElementById('container2');
 
 var layerOne = document.getElementById("layerOne");
 var layerTwo = document.getElementById("layerTwo");
@@ -60,22 +61,22 @@ function onMouseMove (evt) {
     mouse.x=  evt.pageX - container2.offsetLeft;
     mouse.y = evt.pageY - container2.offsetTop;
 
-    layerSixPos.x = (-mouse.x* 0.2) + (container2Pos.w/2 - layerSixPos.w / 2) ;
+    layerSixPos.x = (-mouse.x* 0.2) + (container2Pos.w/2 - layerSixPos.w / 2) +100;
     layerSix.style.left = layerSixPos.x + 'px';
     
-    layerSevenPos.x = (-mouse.x* 0.15) + (container2Pos.w/2 - layerSevenPos.w / 2) ;
+    layerSevenPos.x = (-mouse.x* 0.15) + (container2Pos.w/2 - layerSevenPos.w / 2) +100;
     layerSeven.style.left = layerSevenPos.x + 'px';
 
-    layerEightPos.x = (-mouse.x* 0.12) + (container2Pos.w/2 - layerEightPos.w / 2) ;
+    layerEightPos.x = (-mouse.x* 0.12) + (container2Pos.w/2 - layerEightPos.w / 2) +100;
     layerEight.style.left = layerEightPos.x + 'px';
 
-    layerNinePos.x = (-mouse.x* 0.1) + (container2Pos.w/2 - layerNinePos.w / 2) ;
+    layerNinePos.x = (-mouse.x* 0.1) + (container2Pos.w/2 - layerNinePos.w / 2) +100;
     layerNine.style.left = layerNinePos.x + 'px';
 
-    layerTenPos.x = (-mouse.x* 0.08) + (container2Pos.w/2 - layerTenPos.w / 2) ;
+    layerTenPos.x = (-mouse.x* 0.08) + (container2Pos.w/2 - layerTenPos.w / 2) +100;
     layerTen.style.left = layerTenPos.x + 'px';
 
-    layerElevenPos.x = (-mouse.x* 0.04) + (container2Pos.w/2 - layerElevenPos.w / 2) ;
+    layerElevenPos.x = (-mouse.x* 0.04) + (container2Pos.w/2 - layerElevenPos.w / 2) +100;
     layerEleven.style.left = layerElevenPos.x + 'px';
 
     // layerOnePos.y = (-mouse.y*0.05) + (container1Pos.h / 2 - layerOnePos.h / 2)  ;
@@ -96,20 +97,20 @@ function onMouseMove (evt) {
 
 
 
-// window.addEventListener("scroll",onScroll);
+window.addEventListener("scroll",onScroll);
 
-// function onScroll (evt) {
-//     for (i = 0; i < layerList.length; i++) {
+function onScroll (evt) {
+   
 
-//         // console.log(window.scrollY, layerList[i].offsetTop);
-//         if (window.scrollY - 100 >= layerList[i].offsetTop) {
-//             layerList[i].classList.add('fadeIn');
-//             layerList[i].classList.remove('fadeOut');
-//         } else {
-//             layerList[i].classList.add('fadeOut');
-//             layerList[i].classList.remove('fadeIn');
-//         }
-//     }  
+    console.log(window.scrollY, container2.offsetTop);
+    if (window.scrollY + 350 >= container2.offsetTop) {
+        container2.classList.add('fadeIn');
+        container2.classList.remove('fadeOut');
+    } else {
+        container2.classList.add('fadeOut');
+        container2.classList.remove('fadeIn');
+    }
+     
 
 
-// }
+}
