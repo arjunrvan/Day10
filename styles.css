@@ -1,0 +1,169 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+#container1 {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-repeat: repeat-x;
+    /* border: 1px solid black; */
+}
+
+#layerOne, #layerTwo, #layerThree, #layerFour, #layerFive, #layerSix {
+    /* width: 1000px;
+    height: 500px; */
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#layerOne {
+    width: 1000px;
+    height: 600px;
+    background-image: url(img/person.png);
+    z-index: 10;
+    left: -100px;
+    top: 250px;
+    background-position-y: bottom;
+}
+
+#layerTwo {
+    background-image: url(img/mountain1.png);
+    z-index: 9;
+    top: 400px;
+    width: 1000px;
+    height: 600px;
+}
+
+#layerThree {
+    width: 1000px;
+    height: 600px;
+    background-image: url(img/mountain2.png);
+    z-index: 8;
+    top: 200px;
+    left: -50px;
+}
+#layerFour {
+    width: 1000px;
+    height: 600px;
+    background-image: url(img/mountain3.png);
+    z-index: 7;
+    top: 200px;
+}
+
+#layerFive {
+    width: 1000px;
+    height: 1000px;
+    background-image: url(img/image.jpg);
+    z-index: 6;
+    top: -100px;
+    /* left: 100px; */
+}
+
+#container2 {
+    width: 800px;
+    height: 600px;
+    margin: 100px auto;
+    position: relative;
+    overflow: hidden;
+    background-repeat: repeat-x;
+    /* border: 1px solid black; */
+    background-color:  lightyellow;
+}
+
+.layer {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#layerSix {
+    background-image: url(images/layer_1.png);
+    z-index: 10;
+    width: 1000px;
+    height: 600px;
+    top: 0px;
+}
+
+#layerSeven {
+    background-image: url(images/layer_2.png);
+    z-index: 9;
+    width: 1000px;
+    height: 600px;
+    top: 50px;
+}
+
+
+#layerEight {
+    background-image: url(images/layer_3.png);
+    z-index: 8;
+    width: 1000px;
+    height: 600px;
+    top: 100px;
+}
+
+
+#layerNine {
+    background-image: url(images/layer_4.png);
+    z-index: 7;
+    width: 1000px;
+    height: 600px;
+    top: 150px;
+}
+
+#layerTen {
+    background-image: url(images/layer_5.png);
+    z-index: 6;
+    width: 1000px;
+    height: 600px;
+    top: 200px;
+}
+
+
+#layerEleven {
+    background-image: url(images/layer_6.png);
+    z-index: 5;
+    width: 1000px;
+    height: 600px;
+    top: 250px;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+
+
+
+
+
