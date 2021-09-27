@@ -61,22 +61,22 @@ function onMouseMove (evt) {
     mouse.x=  evt.pageX - container2.offsetLeft;
     mouse.y = evt.pageY - container2.offsetTop;
 
-    layerSixPos.x = (-mouse.x* 0.2) + (container2Pos.w/2 - layerSixPos.w / 2) +100;
+    layerSixPos.x = (-mouse.x* 0.2);
     layerSix.style.left = layerSixPos.x + 'px';
     
-    layerSevenPos.x = (-mouse.x* 0.15) + (container2Pos.w/2 - layerSevenPos.w / 2) +100;
+    layerSevenPos.x = (-mouse.x* 0.15);
     layerSeven.style.left = layerSevenPos.x + 'px';
 
-    layerEightPos.x = (-mouse.x* 0.12) + (container2Pos.w/2 - layerEightPos.w / 2) +100;
+    layerEightPos.x = (-mouse.x* 0.12) ;
     layerEight.style.left = layerEightPos.x + 'px';
 
-    layerNinePos.x = (-mouse.x* 0.1) + (container2Pos.w/2 - layerNinePos.w / 2) +100;
+    layerNinePos.x = (-mouse.x* 0.1) ;
     layerNine.style.left = layerNinePos.x + 'px';
 
-    layerTenPos.x = (-mouse.x* 0.08) + (container2Pos.w/2 - layerTenPos.w / 2) +100;
+    layerTenPos.x = (-mouse.x* 0.08) ;
     layerTen.style.left = layerTenPos.x + 'px';
 
-    layerElevenPos.x = (-mouse.x* 0.04) + (container2Pos.w/2 - layerElevenPos.w / 2) +100;
+    layerElevenPos.x = (-mouse.x* 0.04) ;
     layerEleven.style.left = layerElevenPos.x + 'px';
 
     // layerOnePos.y = (-mouse.y*0.05) + (container1Pos.h / 2 - layerOnePos.h / 2)  ;
@@ -102,7 +102,7 @@ window.addEventListener("scroll",onScroll);
 function onScroll (evt) {
    
 
-    console.log(window.scrollY, container2.offsetTop);
+    // console.log(window.scrollY, container2.offsetTop);
     if (window.scrollY + 350 >= container2.offsetTop) {
         container2.classList.add('fadeIn');
         container2.classList.remove('fadeOut');
